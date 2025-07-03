@@ -1,0 +1,409 @@
+/* RESET E BASE */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  /* HEADER */
+  header {
+    background-color: #f4e9db;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo img {
+    height: 50px;
+    border-radius: 30px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #000;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #a0522d;
+  }
+  
+  /* HERO */
+  .hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    padding-top: 80px;
+    transition: background-image 1.5s ease-in-out;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    animation: fadeInDown 1s ease-out;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .btn-scroll {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #a0522d;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-scroll:hover {
+    background-color: #8b4513;
+  }
+  
+  /* FOOTER */
+  footer {
+    background-color: #222;
+    color: #fff;
+    padding: 60px 20px 30px;
+    position: relative;
+    z-index: 999;
+    font-size: 0.95rem;
+  }
+  
+  footer .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  footer .footer-column {
+    flex: 1 1 250px;
+    margin: 10px;
+    animation: fadeInUp 1s ease;
+  }
+  
+  footer .footer-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #f4e9db;
+  }
+  
+  footer .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  footer .footer-column ul li {
+    margin-bottom: 10px;
+  }
+  
+  footer .footer-column ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  footer .footer-column ul li a:hover {
+    color: #fff;
+  }
+  
+  .social-icons a {
+    color: #f4e9db;
+    margin-right: 15px;
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #fff;
+    transform: scale(1.2);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 0.85rem;
+    color: #aaa;
+  }
+  
+  /* ANIME CARDS */
+  .anime-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 5%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .anime-cards-container::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .anime-cards-container::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .anime-cards-container::-webkit-scrollbar-thumb {
+    background-color: rgba(100, 100, 100, 0.4);
+    border-radius: 4px;
+  }
+  
+  /* PAISAGEM CARDS */
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 40px 0;
+    text-transform: uppercase;
+    color: #8a581ea4;
+  }
+  
+  .paisagem-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 40px 80px;
+  }
+  
+  .paisagem-card {
+    perspective: 1000px;
+    transition: transform 0.3s ease;
+  }
+  
+  .paisagem-card-inner {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+  }
+  
+  .paisagem-card:hover .paisagem-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .paisagem-card-front, .paisagem-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .paisagem-card-front {
+    background: #fff;
+  }
+  
+  .paisagem-card-front img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+  }
+  
+  .paisagem-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #8a581ea4;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    animation: pulse 1.5s infinite;
+  }
+  
+  .paisagem-info {
+    padding: 15px;
+  }
+  
+  .paisagem-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 6px;
+  }
+  
+  .paisagem-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  .paisagem-card-back {
+    background: linear-gradient(145deg, #ffffff, #e6eaf0);
+    color: #333;
+    transform: rotateY(180deg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .paisagem-card-back h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #0a0a0c;
+  }
+  
+  .paisagem-card-back p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .paisagem-tags {
+    margin-top: 15px;
+  }
+  
+  .paisagem-tags span {
+    display: inline-block;
+    background: #0a0a0c;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    margin: 5px 5px 0 0;
+  }
+  
+  .btn.watch-btn {
+    margin-top: 20px;
+    padding: 10px;
+    background: #fefeff;
+    color: #111010;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+  
+  .btn.watch-btn:hover {
+    background: #f0ddc4;
+    transform: scale(1.05);
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.85; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  /* RESPONSIVIDADE */
+  @media (max-width: 768px) {
+    header {
+      padding: 15px 20px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  
+    .hero h1 {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+      text-align: center;
+      padding: 0 15px;
+    }
+  
+    footer .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    footer .footer-column {
+      flex: 1 1 100%;
+      margin: 20px 0;
+      text-align: center;
+    }
+  
+    .social-icons {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .section-title {
+      font-size: 1.8rem;
+    }
+  
+    .paisagem-card-inner {
+      height: 320px;
+    }
+  
+    .paisagem-card-front img {
+      height: 60%;
+    }
+  
+    .paisagem-title {
+      font-size: 1rem;
+    }
+  
+    .paisagem-card-back h3 {
+      font-size: 1.2rem;
+    }
+  
+    .paisagem-card-back p {
+      font-size: 0.85rem;
+    }
+  
+    .anime-cards-container {
+      padding: 1rem;
+      gap: 1rem;
+    }
+  }
+  
