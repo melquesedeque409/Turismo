@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kaluka - Eventos</title>
+  <link rel="stylesheet" href="eventos.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="w-removebg-preview.png">KALUKA</div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="Actividades.html">Atividades</a>
+      <a href="Destinos.html">Destinos</a>
+      <a href="#">Contactos</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Eventos Turísticos em Angola</h1>
+    <p>Participe dos melhores eventos culturais, musicais e gastronômicos do país!</p>
+  </section>
+
+  <section class="filtros">
+    <button class="filtro-btn" data-tipo="todos">Todos</button>
+    <button class="filtro-btn" data-tipo="cultural">Cultural</button>
+    <button class="filtro-btn" data-tipo="musical">Musical</button>
+    <button class="filtro-btn" data-tipo="gastronomico">Gastronômico</button>
+  </section>
+
+  <section class="eventos">
+    <div class="card" data-tipo="cultural">
+      <img src="Cultura.jpg" alt="Festival Cultural" />
+      <h2>Festival de Cultura</h2>
+      <p>Celebrando tradições locais com dança, teatro e arte.</p>
+    </div>
+    <div class="card" data-tipo="musical">
+      <img src="images (6).jpeg" alt="Noite de Kuduro" />
+      <h2>Noite de Kuduro</h2>
+      <p>Show ao vivo com artistas angolanos e muita dança.</p>
+    </div>
+    <div class="card" data-tipo="gastronomico">
+      <img src="4a-Edicao-da-Feira-dos-Municipios-e-Cidades-de-Angola-770x513.jpg" alt="Feira Gastronômica" />
+      <h2>Feira Gastronômica</h2>
+      <p>Sabores autênticos da culinária angolana em um só lugar.</p>
+    </div>
+  </section>
+
+  <div class="modal" id="modal">
+    <div class="modal-conteudo">
+      <span class="fechar" id="fecharModal">&times;</span>
+      <h2 id="modalTitulo"></h2>
+      <img id="modalImagem" src="" alt="">
+      <p id="modalDescricao"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Kaluka - Explore Angola com autenticidade</p>
+  </footer> 
+  <script src="eventos.js"></script>
+</body>
+</html>
