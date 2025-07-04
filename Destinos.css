@@ -1,0 +1,220 @@
+
+ :root {
+    --dark-brown: #4b2a15;
+    --orange-burnt: #c6651c;
+    --golden-yellow: #f7a900;
+    --sand: #f8e0b4;
+    --light-beige: #fff7e1;
+  }
+:root {
+  --marrom-escuro: #4e2e17;
+  --laranja-queimado: #c76b1f;
+  --mostarda: #e6a535;
+  --bege: #fbecc3;
+  --areia: #fdf7e1;
+}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--light-beige);
+    color: var(--dark-brown);
+  }
+
+  header {
+    background-color: var(--sand);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  } 
+  .logo img {
+    height: 50px;
+    border-radius: 30px; 
+    
+  }
+
+  header h1 {
+    color: var(--dark-brown); 
+    position: absolute; 
+    top: 26%; 
+    left: 7%; 
+    font-weight: bold;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav a {
+    margin: 0 10px;
+    color: var(--dark-brown);
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+  }
+
+  nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--laranja-queimado);
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s;
+  }
+
+  nav a:hover {
+    color: var(--mostarda);
+  }
+
+  nav a:hover::after {
+    width: 100%;
+  }
+
+  .hero {
+    background: linear-gradient(to bottom, var(--sand), var(--light-beige));
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero button {
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--orange-burnt);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .hero button:hover {
+    background-color: var(--golden-yellow);
+  }
+
+  .slider-container {
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+    max-width: 1100px; /* Limita largura e centraliza */
+    width: 100%;
+  }
+  
+  
+  .slider-container:hover .slider {
+    animation: none;
+  }
+  
+
+  .card {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    flex: 0 0 280px;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .card .info {
+    padding: 1rem;
+  }
+
+  .card .info h3 {
+    color: var(--orange-burnt);
+    margin-bottom: 0.5rem;
+  }
+
+  .card .info p {
+    font-size: 0.95rem;
+    color: #333;
+  }
+
+  footer {
+    background-color: var(--dark-brown);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+  }
+
+  @keyframes slide {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @media (max-width: 600px) {
+    .hero h2 {
+      font-size: 1.8rem;
+    }
+
+    .slider {
+      animation: none;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      flex: 0 0 90%;
+    }
+
+    .hero button {
+      width: 100%;
+    }
+  } 
+  .scroll-button {
+position: fixed;
+bottom: 2rem;
+right: 1rem;
+background-color: var(--orange-burnt);
+color: white;
+border: none;
+border-radius: 50%;
+width: 45px;
+height: 45px;
+font-size: 1.5rem;
+cursor: pointer;
+box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+transition: background-color 0.3s, transform 0.2s;
+z-index: 999;
+}
+
+.scroll-button:hover {
+background-color: var(--golden-yellow);
+transform: scale(1.1);
+} 
