@@ -1,0 +1,378 @@
+:root {
+  --marrom-escuro: #4a2c18;
+  --marrom-claro: #c1691a;
+  --mostarda: #f8e0b4;
+  --bege: #fdefc5;
+  --creme: #fff8e4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--creme);
+  color: var(--marrom-escuro);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+header {
+  background: var(--mostarda);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideDown 1s ease-out;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--marrom-escuro);
+}
+
+nav a {
+  margin: 0 1rem;
+  color: var(--marrom-escuro);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--marrom-claro);
+}
+
+.hero {
+  background: linear-gradient(to bottom, var(--mostarda), var(--creme));
+  padding: 4rem 2rem;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+}
+
+.activities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+.card {
+  background: var(--bege);
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  width: 300px;
+  overflow: hidden;
+  transform: scale(1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: popIn 0.8s ease forwards;
+  opacity: 0;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h2 {
+  margin: 1rem;
+  font-size: 1.5rem;
+  color: var(--marrom-claro);
+}
+
+.card p {
+  margin: 0 1rem 1rem;
+}
+
+footer {
+  background: var(--marrom-escuro);
+  color: var(--creme);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* Animações */
+@keyframes slideDown {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .activities {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-end;
+  }
+} 
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: var(--creme);
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.5s ease;
+}
+
+.modal-content img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--marrom-escuro);
+  cursor: pointer;
+} 
+.filtro {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.filtro button {
+  background: var(--mostarda);
+  color: var(--marrom-escuro);
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.filtro button:hover,
+.filtro button.active {
+  background: var(--marrom-claro);
+  color: white;
+} 
+.carrossel {
+  position: relative;
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  margin-top: -2rem;
+}
+
+.carrossel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrossel-slide {
+  min-width: 100%;
+  position: relative;
+  display: none;
+}
+
+.carrossel-slide.active {
+  display: block;
+}
+
+.carrossel-slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.carrossel-texto {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: var(--creme);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+.carrossel-texto h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.carrossel-texto p {
+  font-size: 1.2rem;
+} 
+.carrossel {
+  position: relative;
+  width: 100%;
+  max-height: 450px;
+  overflow: hidden;
+  margin-top: -2rem;
+}
+
+.carrossel-container {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carrossel-slide {
+  min-width: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.carrossel-slide.active {
+  position: relative;
+  opacity: 1;
+  z-index: 1;
+}
+
+.carrossel-slide img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  filter: brightness(0.6) saturate(1.2);
+  mix-blend-mode: multiply;
+}
+
+.carrossel-texto {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  max-width: 40%;
+  animation: slideInTexto 1s ease;
+}
+
+@keyframes slideInTexto {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.carrossel-texto h3 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--mostarda);
+}
+
+.carrossel-texto p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Setas de navegação */
+.seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  color: var(--marrom-escuro);
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.seta:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.seta.anterior {
+  left: 1rem;
+}
+
+.seta.proxima {
+  right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .carrossel-texto {
+    max-width: 90%;
+    left: 1rem;
+    bottom: 1rem;
+    padding: 1rem;
+  }
+
+  .carrossel-texto h3 {
+    font-size: 1.5rem;
+  }
+
+  .carrossel-texto p {
+    font-size: 1rem;
+  }
+}
+
+
+
+
