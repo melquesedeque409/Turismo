@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Destinos | Kaluka</title> 
+  <link rel="stylesheet" href="Destinos.css">  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  
+  <header> 
+    <div class="logo">   
+      <img src="w-removebg-preview.png">
+      KALUKA
+    </div>
+   <!-- Botão hamburguer -->
+   <button class="hamburger" id="hamburgerBtn">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Menu de navegação -->
+  <nav id="navLinks">
+    <a href="index.html">INICIO</a>
+    <a href="Actividades.html">ACTIVIDADES</a>
+    <a href="Transportes.html">TRANSPORTE</a>
+    <a href="Eventos.html">EVENTOS</a>
+  </nav>
+</header>
+
+
+<section class="hero">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="ondas.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo.
+  </video>
+  
+  <div class="overlay"></div> <!-- Adiciona contraste -->
+
+  <div class="hero-content">
+    <h2>Descubra destinos incríveis</h2>
+    <p>Explore paisagens inesquecíveis, cultura vibrante e aventuras naturais.</p>
+    <a href="#mais-destinos" class="hero-btn">Ver Destinos</a>
+  </div>
+</section>
+
+
+  <section id="mais-destinos" class="cards-grid">
+    <!-- Card 1 -->
+    <div class="card" data-modal="modal1">
+      <img src="pexels-ensaio-da-cegueira-321162394-14305998.jpg" alt="Destino 1">
+      <div class="info">
+        <h3>Praia da Corimba</h3>
+        <p>Areias douradas e águas tranquilas. Um dos destinos favoritos para relaxar.</p> 
+        <button class="card-btn">Saber mais</button>
+      </div>
+    </div>
+  
+    <!-- Card 2 -->
+    <div class="card" data-modal="modal2">
+      <img src="images (5).jpeg" alt="Destino 2">
+      <div class="info">
+        <h3>Fortaleza de São Miguel</h3>
+          <p>Patrimônio histórico com vista panorâmica de Luanda. Ideal para os amantes de história.</p> 
+          <button class="card-btn">Saber mais</button>
+      </div>
+    </div>
+  
+    <!-- Card 3 -->
+    <div class="card" data-modal="modal3">
+      <img src="image.jpg" alt="Destino 3">
+      <div class="info">
+        <h3>Mercado do 30</h3>
+          <p>Imersão cultural com produtos típicos, música e sabores locais inesquecíveis.</p> 
+          <button class="card-btn">Saber mais</button>
+      </div>
+    </div>
+  
+    <!-- Card 4 -->
+    <div class="card" data-modal="modal4">
+      <img src="images.jpeg" alt="Destino 4">
+      <div class="info">
+        <h3>Quedas de Calandula</h3>
+          <p>Uma das maiores quedas d'água da África com paisagens deslumbrantes.</p> 
+          <button class="card-btn">Saber mais</button>
+      </div>
+    </div>
+  
+    <!-- Card 5 -->
+    <div class="card" data-modal="modal5">
+      <img src="Kissama_1.jpg" alt="Destino 5">
+      <div class="info">
+        <h3>Parque da Kissama</h3>
+        <p>Safáris incríveis e biodiversidade única para amantes da natureza.</p> 
+        <button class="card-btn">Saber mais</button>
+      </div>
+    </div>
+  
+    <!-- Card 6 -->
+    <div class="card" data-modal="modal6">
+      <img src="images (2).jpeg" alt="Destino 6">
+      <div class="info">
+        <h3>Ilha do Mussulo</h3>
+        <p>Refúgio tropical próximo a Luanda, ideal para férias tranquilas.</p> 
+        <button class="card-btn">Saber mais</button>
+      </div>
+    </div>
+  
+    <!-- Card 7 -->
+    <div class="card" data-modal="modal7">
+      <img src="images (1).jpeg" alt="Destino 7">
+      <div class="info">
+        <h3>Praia da Corimba</h3>
+        <p>Areias douradas e águas tranquilas. Um dos destinos favoritos para relaxar.</p> 
+        <button class="card-btn">Saber mais</button>
+      </div>
+    </div>
+  
+    <!-- Card 8 -->
+    <div class="card" data-modal="modal8">
+      <img src="images (5).jpeg" alt="Destino 8">
+      <div class="info">
+        <h3>Fortaleza de São Miguel</h3>
+          <p>Patrimônio histórico com vista panorâmica de Luanda. Ideal para os amantes de história.</p> 
+          <button class="card-btn">Saber mais</button>
+      </div>
+    </div>
+  
+    <!-- Card 9 -->
+    <div class="card" data-modal="modal9">
+      <img src="barragem-de-caculo-cabaca.jpg" alt="Destino 9">
+      <div class="info">
+        <h3>Barragem do capanda</h3>
+            <p>O planeamento para construção de uma hidroeléctrica na média bacia do Cuanza partiu inicialmente de Portugal.</p> 
+            <button class="card-btn">Saber mais</button>
+      </div>
+    </div>
+  </section>
+<!-- Modais com imagens -->
+<div class="modal" id="modal1">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="pexels-ensaio-da-cegueira-321162394-14305998.jpg" alt="Destino 1" class="modal-img">
+    <h2>Praia da Corimba</h2>
+    <p>Areias douradas e águas tranquilas. Um dos destinos favoritos para relaxar.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal2">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="images (5).jpeg" alt="Destino 2" class="modal-img">
+    <h2>Fortaleza de São Miguel</h2>
+          <p>Patrimônio histórico com vista panorâmica de Luanda. Ideal para os amantes de história.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal3">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="image.jpg" alt="Destino 3" class="modal-img">
+    <h2>Mercado do 30</h2>
+          <p>Imersão cultural com produtos típicos, música e sabores locais inesquecíveis.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal4">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="images.jpeg" alt="Destino 4" class="modal-img">
+    <h2>Ilha do Mussulo</h2>
+        <p>Refúgio tropical próximo a Luanda, ideal para férias tranquilas.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal5">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="Kissama_1.jpg" alt="Destino 5" class="modal-img">
+    <h2>Parque da Kissama</h2>
+    <p>Safáris incríveis e biodiversidade única para amantes da natureza.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal6">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="images (2).jpeg" alt="Destino 6" class="modal-img">
+    <h3>Ilha do Mussulo</h3>
+    <p>Refúgio tropical próximo a Luanda, ideal para férias tranquilas.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal7">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="images (1).jpeg" alt="Destino 7" class="modal-img">
+    <h2>Praia da Corimba</h2>
+    <p>Areias douradas e águas tranquilas. Um dos destinos favoritos para relaxar.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal8">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="images (5).jpeg" alt="Destino 8" class="modal-img">
+    <h2>Fortaleza de São Miguel</h2>
+          <p>Patrimônio histórico com vista panorâmica de Luanda. Ideal para os amantes de história.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal9">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="barragem-de-caculo-cabaca.jpg" alt="Destino 9" class="modal-img">
+    <h2>Barragem do capanda</h2>
+    <p>O planeamento para construção de uma hidroeléctrica na média bacia do Cuanza partiu inicialmente de Portugal.</p>
+  </div>
+</div>
+ 
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Sobre o Kaluka</h4>
+        <p>Somos uma plataforma dedicada a promover o turismo autêntico em Angola. Descubra paisagens, culturas e experiências inesquecíveis.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Links Rápidos</h4>
+        <ul>
+          <li><a href="#destinos">Destinos</a></li>
+          <li><a href="#atividades">Atividades</a></li>
+          <li><a href="#transporte">Transporte</a></li>
+          <li><a href="#eventos">Eventos</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contactos</h4>
+        <p><i class="fas fa-envelope"></i> contato@kaluka.ao</p>
+        <p><i class="fas fa-phone"></i> +244 923 456 789</p>
+        <div class="social-icons mt-3">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Kaluka. Todos os direitos reservados.
+    </div>
+  </footer>
+  <button id="scrollToggle" class="scroll-button">↓</button> 
+
+  <script src="Destinos.js"></script>
+  
+</body>
+</html>
