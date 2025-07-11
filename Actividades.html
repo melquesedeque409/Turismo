@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ACTIVIDADES | Kaluka</title> 
+  <link rel="stylesheet" href="Actividades.css">  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  
+  <header> 
+    <div class="logo">   
+      <img src="w-removebg-preview.png">
+      KALUKA
+    </div>
+   <!-- Botão hamburguer -->
+   <button class="hamburger" id="hamburgerBtn">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Menu de navegação -->
+  <nav id="navLinks">
+    <a href="index.html">INICIO</a>
+    <a href="Destinos.html">DESTINOS</a>
+    <a href="Actividades.html">ACTIVIDADES</a>
+    <a href="Transportes.html">TRANSPORTE</a>
+    <a href="Eventos.html">EVENTOS</a>
+  </nav>
+</header>
+
+
+<section class="hero">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="atividade.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo.
+  </video>
+  
+  <div class="overlay"></div> <!-- Adiciona contraste -->
+
+  <div class="hero-content">
+    <h2>ACTIVIDADES EM ANGOLA</h2>
+    <p>Descubra experiências únicas e vibrantes pelo país</p>
+    <div class="search-container" id="searchContainer">
+      <button class="btn-scroll" id="exploreBtn" onclick="toggleSearch()">VER ACTIVIDADES</button>
+    </div>
+  </div>
+</section>
+
+
+  <section id="mais-destinos" class="cards-grid">
+    <!-- Card 1 -->
+    <div class="card" data-modal="modal1">
+      <img src="pexels-andrei-serikov-2151419007-32854669.jpg" alt="Destino 1">
+      <div class="info">
+        <h3>Trilha Ecológica</h3>
+        <p>Explore paisagens naturais em caminhadas guiadas.</p> 
+        <button class="card-btn">Saber mais</button>
+      </div>
+    </div>
+  
+    <!-- Card 2 -->
+    <div class="card" data-modal="modal2">
+      <img src="img_9072.jpg" alt="Destino 2">
+      <div class="info">
+        <h3>Mergulho em Benguela</h3>
+        <p>Descubra a vida marinha nas águas cristalinas do sul.</p> 
+          <button class="card-btn">Saber mais</button>
+      </div>
+    </div>
+  
+    <!-- Card 3 -->
+    <div class="card" data-modal="modal3">
+      <img src="327281936_698236798432746_6967008385622744585_n.jpg" alt="Destino 3">
+      <div class="info">
+        <h3>Tour Cultural</h3>
+        <p>Conheça a riqueza da cultura angolana em visitas guiadas.</p> 
+          <button class="card-btn">Saber mais</button>
+      </div>
+    </div>
+  
+    <!-- Card 4 -->
+    <div class="card" data-modal="modal4">
+      <img src="images (4).jpeg" alt="Destino 4">
+      <div class="info">
+        <h3>Safari em Kissama</h3>
+        <p>Observe animais selvagens em seu habitat natural.</p> 
+          <button class="card-btn">Saber mais</button>
+      </div>
+    </div>
+  
+    <!-- Card 5 -->
+    <div class="card" data-modal="modal5">
+      <img src="VP_-Mercado_Artezanato_019-1728x800_c.jpg" alt="Destino 5">
+      <div class="info">
+        <h3>Oficinas de Artesanato</h3>
+      <p>Participe de oficinas com artesãos locais e leve sua peça.</p> 
+        <button class="card-btn">Saber mais</button>
+      </div>
+    </div>
+  
+    <!-- Card 6 -->
+    <div class="card" data-modal="modal6">
+      <img src="images (2).jpeg" alt="Destino 6">
+      <div class="info">
+        <h3>Ilha do Mussulo</h3>
+        <p>Refúgio tropical próximo a Luanda, ideal para férias tranquilas.</p> 
+        <button class="card-btn">Saber mais</button>
+      </div>
+    </div>
+  
+    <!-- Card 7 -->
+    <div class="card" data-modal="modal7">
+      <img src="images (1).jpeg" alt="Destino 7">
+      <div class="info">
+        <h3>Praia da Corimba</h3>
+        <p>Areias douradas e águas tranquilas. Um dos destinos favoritos para relaxar.</p> 
+        <button class="card-btn">Saber mais</button>
+      </div>
+    </div>
+  
+    <!-- Card 8 -->
+    <div class="card" data-modal="modal8">
+      <img src="maxresdefault.jpg" alt="Destino 8">
+      <div class="info">
+        <h3>Gastronomia Local</h3>
+        <p>Saboreie pratos típicos angolanos em experiências culinárias.</p> 
+          <button class="card-btn">Saber mais</button>
+      </div>
+    </div>
+  
+    <!-- Card 9 -->
+    <div class="card" data-modal="modal9">
+      <img src="barragem-de-caculo-cabaca.jpg" alt="Destino 9">
+      <div class="info">
+        <h3>Barragem do capanda</h3>
+            <p>O planeamento para construção de uma hidroeléctrica na média bacia do Cuanza partiu inicialmente de Portugal.</p> 
+            <button class="card-btn">Saber mais</button>
+      </div>
+    </div>
+  </section>
+<!-- Modal 1: Trilha Ecológica -->
+<div class="modal" id="modal1">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="pexels-andrei-serikov-2151419007-32854669.jpg" alt="Trilha Ecológica" class="modal-img">
+    <h2>Trilha Ecológica</h2>
+    <p>Explore paisagens naturais em caminhadas guiadas.</p>
+  </div>
+</div>
+
+<!-- Modal 2: Mergulho em Benguela -->
+<div class="modal" id="modal2">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="img_9072.jpg" alt="Mergulho em Benguela" class="modal-img">
+    <h2>Mergulho em Benguela</h2>
+    <p>Descubra a vida marinha nas águas cristalinas do sul.</p>
+  </div>
+</div>
+
+<!-- Modal 3: Tour Cultural -->
+<div class="modal" id="modal3">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="327281936_698236798432746_6967008385622744585_n.jpg" alt="Tour Cultural" class="modal-img">
+    <h2>Tour Cultural</h2>
+    <p>Conheça a riqueza da cultura angolana em visitas guiadas.</p>
+  </div>
+</div>
+
+<!-- Modal 4: Safari em Kissama -->
+<div class="modal" id="modal4">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="images (4).jpeg" alt="Safari em Kissama" class="modal-img">
+    <h2>Safari em Kissama</h2>
+    <p>Observe animais selvagens em seu habitat natural.</p>
+  </div>
+</div>
+
+<!-- Modal 5: Oficinas de Artesanato -->
+<div class="modal" id="modal5">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="VP_-Mercado_Artezanato_019-1728x800_c.jpg" alt="Oficinas de Artesanato" class="modal-img">
+    <h2>Oficinas de Artesanato</h2>
+    <p>Participe de oficinas com artesãos locais e leve sua peça.</p>
+  </div>
+</div>
+
+<!-- Modal 6: Ilha do Mussulo -->
+<div class="modal" id="modal6">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="images (2).jpeg" alt="Ilha do Mussulo" class="modal-img">
+    <h2>Ilha do Mussulo</h2>
+    <p>Refúgio tropical próximo a Luanda, ideal para férias tranquilas.</p>
+  </div>
+</div>
+
+<!-- Modal 7: Praia da Corimba -->
+<div class="modal" id="modal7">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="images (1).jpeg" alt="Praia da Corimba" class="modal-img">
+    <h2>Praia da Corimba</h2>
+    <p>Areias douradas e águas tranquilas. Um dos destinos favoritos para relaxar.</p>
+  </div>
+</div>
+
+<!-- Modal 8: Gastronomia Local -->
+<div class="modal" id="modal8">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="maxresdefault.jpg" alt="Gastronomia Local" class="modal-img">
+    <h2>Gastronomia Local</h2>
+    <p>Saboreie pratos típicos angolanos em experiências culinárias.</p>
+  </div>
+</div>
+
+<!-- Modal 9: Barragem do Capanda -->
+<div class="modal" id="modal9">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="barragem-de-caculo-cabaca.jpg" alt="Barragem do capanda" class="modal-img">
+    <h2>Barragem do capanda</h2>
+    <p>O planeamento para construção de uma hidroeléctrica na média bacia do Cuanza partiu inicialmente de Portugal.</p>
+  </div>
+</div>
+
+ 
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Sobre o Kaluka</h4>
+        <p>Somos uma plataforma dedicada a promover o turismo autêntico em Angola. Descubra paisagens, culturas e experiências inesquecíveis.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Links Rápidos</h4>
+        <ul>
+          <li><a href="#destinos">Destinos</a></li>
+          <li><a href="#atividades">Atividades</a></li>
+          <li><a href="#transporte">Transporte</a></li>
+          <li><a href="#eventos">Eventos</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contactos</h4>
+        <p><i class="fas fa-envelope"></i> contato@kaluka.ao</p>
+        <p><i class="fas fa-phone"></i> +244 923 456 789</p>
+        <div class="social-icons mt-3">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Kaluka. Todos os direitos reservados.
+    </div>
+  </footer>
+  <button id="scrollToggle" class="scroll-button">↓</button> 
+
+  <script src="Actividades.js"></script>
+  
+</body>
+</html>
